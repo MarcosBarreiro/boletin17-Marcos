@@ -1,8 +1,10 @@
-package Boletin17.Junit;
+package Boletin17.jUnit;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import Boletin17.Xeometria;
 
 public class XeometriaTest {
 
@@ -21,7 +23,7 @@ public class XeometriaTest {
 	@Test
 	public void testTeoremaPitagorasIntInt() {
 		Xeometria xeo = new Xeometria();
-		assertEquals(2.83,xeo.teoremaPitagoras(2,2),0.01);
+		assertEquals(2.83,xeo.teoremaPitagoras(2,2),0.08);
 	}
 
 	@Test

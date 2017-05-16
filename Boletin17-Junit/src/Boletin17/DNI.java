@@ -1,4 +1,4 @@
-package Boletin17.Junit;
+package Boletin17;
 
 import java.util.ArrayList;
 
