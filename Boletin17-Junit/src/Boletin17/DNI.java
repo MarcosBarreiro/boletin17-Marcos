@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DNI {
 
 	
-	public final static char ORDEN_CARACTERES[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
+	public final static char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
 			'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
 	public boolean eValido(String dni) {
@@ -22,7 +22,7 @@ public class DNI {
 		}
 		if (c > 9 || c == -1) return false;
 		
-		char validChar = ORDEN_CARACTERES[num % 23]; 
+		char validChar = LETRA_DNI[num % 23]; 
 
 		if (dni.charAt(8) == validChar) {
 			return true;
@@ -40,7 +40,7 @@ public class DNI {
 			num += dni.get(i)*Math.pow(10, 7-i);
 		}
 
-		char validChar = ORDEN_CARACTERES[num % 23]; 
+		char validChar = LETRA_DNI[num % 23]; 
 
 		if (dni.get(8) == validChar || dni.get(8) == Character.toLowerCase(validChar)) {
 			return true;
@@ -61,7 +61,7 @@ public class DNI {
 		}
 		if (c > 9 || c == -1) return 0;
 		
-		return ORDEN_CARACTERES[num % 23]; 
+		return LETRA_DNI[num % 23]; 
 	}
 
 	public int calculaLetra(ArrayList<Integer> numero_dni) {
@@ -72,6 +72,6 @@ public class DNI {
 		for (int i = 0; i < 8; i++) {
 			num += numero_dni.get(i)*Math.pow(10, 7-i);
 		}
-		return ORDEN_CARACTERES[num % 23];
+		return LETRA_DNI[num % 23];
 	}
 }
