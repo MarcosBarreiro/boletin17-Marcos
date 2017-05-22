@@ -9,9 +9,9 @@ import Boletin17.Xeometria;
 public class XeometriaTest {
 
 	@Test
-	public void testPerímetroCadrado() {
+	public void testPerimetroCadrado() {
 		Xeometria xeo = new Xeometria();
-		assertEquals(xeo.perímetroCadrado(-123),-1);
+		assertEquals(xeo.perimetroCadrado(-123),-1);
 	}
 
 	@Test
@@ -23,7 +23,7 @@ public class XeometriaTest {
 	@Test
 	public void testTeoremaPitagorasIntInt() {
 		Xeometria xeo = new Xeometria();
-		assertEquals(2.83,xeo.teoremaPitagoras(2,2),0.08);
+		fail("Not yet implemented");
 	}
 
 	@Test

@@ -3,7 +3,7 @@ package Boletin17;
 
 public class Xeometria {
 	
-	public int perímetroCadrado(int lado) {
+	public int perimetroCadrado(int lado) {
 		if (lado<0) {
 			return -1;
 		}	
