@@ -4,23 +4,19 @@ import java.util.ArrayList;
 
 public class DNI {
 
-	
+	/*
+	 *Esto es una cadena de caracteres con una letra en cada posicion 
+	 */
 	public final static char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
 			'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
-
+ 
+	/**
+	 * 
+	 * @param dni es un string q es un dni
+	 * @return booleano, true si el dni corresponde con la letra o false en caso contrario
+	 */
 	public boolean eValido(String dni) {
-		if (dni.length() != 9)
-			return false;
-
-		dni = dni.toUpperCase();
-
-		int num = 0, c = 0;
-		for (int i = 0; i < 8; i++) {
-			c = Character.getNumericValue(dni.charAt(i));
-			if (c > 9 || c == -1) break;
-			num += c*Math.pow(10, 7-i);
-		}
-		if (c > 9 || c == -1) return false;
+		int num = Integer.parseInt(dni.substring(0, 7)); 
 		
 		char validChar = LETRA_DNI[num % 23]; 
 
@@ -31,6 +27,12 @@ public class DNI {
 		}
 	}
 	
+	
+	/**
+	 * 
+	 * @param dni es un array
+	 * @return booleano, true si el dni corresponde con la letra o false en caso contrario
+	 */
 	public boolean eValido(ArrayList<Integer> dni) {
 		if (dni.size() != 9)
 			return false;
@@ -49,21 +51,20 @@ public class DNI {
 		}
 	}
 
+	/**
+	 * 
+	 * @param numero_dni es el dni en un string
+	 * @return calcula la letra que corresponde para el grupo de los 8 numeros del dni
+	 */
 	public int calculaLetra(String numero_dni) {
-		if (numero_dni.length() != 8)
-			return 0;
 
-		int num = 0, c = 0;
-		for (int i = 0; i < 8; i++) {
-			c = Character.getNumericValue(numero_dni.charAt(i));
-			if (c > 9 || c == -1) break;
-			num += c*Math.pow(10, 7-i);
-		}
-		if (c > 9 || c == -1) return 0;
+		int num = Integer.parseInt(numero_dni); 
 		
 		return LETRA_DNI[num % 23]; 
 	}
 
+	
+	
 	public int calculaLetra(ArrayList<Integer> numero_dni) {
 		if (numero_dni.size() != 8)
 			return 0;

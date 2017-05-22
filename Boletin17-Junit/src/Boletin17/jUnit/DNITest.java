@@ -10,7 +10,7 @@ import Boletin17.DNI;
 public class DNITest extends DNI {
 
 	@Test
-	public void testEValidoString() {
+	public void testeValidoString() {
 		DNI dni = new DNI();
 		Assert.assertEquals(dni.eValido("78786658P"), true);
 		

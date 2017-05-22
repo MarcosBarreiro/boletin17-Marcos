@@ -23,7 +23,7 @@ public class XeometriaTest {
 	@Test
 	public void testTeoremaPitagorasIntInt() {
 		Xeometria xeo = new Xeometria();
-		fail("Not yet implemented");
+		assertEquals(xeo.TeoremaPitagorasIntInt(2),8);
 	}
 
 	@Test
