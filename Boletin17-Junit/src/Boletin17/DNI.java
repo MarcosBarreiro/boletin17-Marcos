@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class DNI {
 
-	/*
-	 *Esto es una cadena de caracteres con una letra en cada posicion 
-	 */
+	//Esto es una cadena de caracteres con una letra en cada posicion 
+	
 	public final static char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
 			'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
  
-	/**
+	/**Recibe un dni y comprueba si la letra corresponde con los digitos
 	 * 
 	 * @param dni es un string q es un dni
 	 * @return booleano, true si el dni corresponde con la letra o false en caso contrario
@@ -28,7 +27,7 @@ public class DNI {
 	}
 	
 	
-	/**
+	/**Recibe un dni y comprueba si la letra corresponde con los digitos
 	 * 
 	 * @param dni es un array
 	 * @return booleano, true si el dni corresponde con la letra o false en caso contrario
@@ -51,10 +50,10 @@ public class DNI {
 		}
 	}
 
-	/**
+	/**Recibe los digitos de un dni y asigna la letra correspondiente
 	 * 
 	 * @param numero_dni es el dni en un string
-	 * @return calcula la letra que corresponde para el grupo de los 8 numeros del dni
+	 * @return letra que corresponde para el grupo de los 8 numeros del dni
 	 */
 	public int calculaLetra(String numero_dni) {
 
@@ -64,7 +63,11 @@ public class DNI {
 	}
 
 	
-	
+	/**Recibe los digitos de un dni y asigna la letra correspondiente
+	 * 
+	 * @param numero_dni es el dni en un array
+	 * @return letra correspondiente
+	 */
 	public int calculaLetra(ArrayList<Integer> numero_dni) {
 		if (numero_dni.size() != 8)
 			return 0;
