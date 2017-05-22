@@ -23,12 +23,13 @@ public class XeometriaTest {
 	@Test
 	public void testTeoremaPitagorasIntInt() {
 		Xeometria xeo = new Xeometria();
-		assertEquals(xeo.TeoremaPitagorasIntInt(2),8);
+		assertEquals(xeo.teoremaPitagoras(-1, -1), Math.sqrt(-1), 0.001);
 	}
 
 	@Test
 	public void testTeoremaPitagorasDoubleDouble() {
-		fail("Not yet implemented");
+		Xeometria xeo = new Xeometria();
+		assertEquals(xeo.teoremaPitagoras(-1, -1), Math.sqrt(-1),0.001);
 	}
 
 }
