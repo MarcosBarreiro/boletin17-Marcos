@@ -8,10 +8,10 @@ import org.junit.Test;
 import Boletin17.DNI;
 
 public class DNITest extends DNI {
-
+	DNI dni = new DNI();
+	
 	@Test
 	public void testeValidoString() {
-		DNI dni = new DNI();
 		Assert.assertEquals(dni.eValido("78786658P"), true);
 		
 	}
