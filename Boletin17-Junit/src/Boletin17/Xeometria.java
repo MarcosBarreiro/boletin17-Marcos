@@ -14,7 +14,7 @@ public class Xeometria {
 	 */
 	public int perimetroCadrado(int lado) {
 		//lado nulo o negativo devuelve error
-		if (lado<0) {
+		if (lado<=0) {
 			return -1;
 		}	
 		return (lado*lado);		
@@ -27,7 +27,7 @@ public class Xeometria {
 	 */
 	public int areaCadrado(int lado) {
 		// lado nulo o negativo devuelve error
-		if (lado<0) {
+		if (lado<=0) {
 			return -1;
 		}		
 		return (lado*4);
@@ -59,6 +59,9 @@ public class Xeometria {
 		//catetoA o hipotenusa nulos o negativos devuelve error
 		if (catetoA<=0 || hipotenusa <=0) {
 			return -1;
+		}
+		if (catetoA > hipotenusa) {
+			return -2;
 		}
 		return Math.sqrt(catetoA*catetoA) + (hipotenusa*hipotenusa);
 	}
